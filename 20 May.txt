@@ -1,0 +1,104 @@
+create table persons(
+id int unique Not null,
+lastname varchar(255) not null,
+firstname varchar(255) not null,
+age int
+)
+
+ 
+ALTER TABLE persons
+ADD UNIQUE (age);
+
+ALTER TABLE persons
+MODIFY age INT NOT NULL;	
+
+insert into persons values(102,"gaurav","kakkar",10);
+
+UPDATE persons
+SET age = 0
+WHERE age IS NULL;
+
+select * from persons;
+
+drop table persons;
+create table persons(
+id int unique not null,
+lastname varchar(255) not null,
+firstname varchar(255) not null,
+age int not null Check (age>=18 and age<=23)
+)
+
+insert inrto persons values(1,"gaurav","kakkar",20);
+
+create table persons(
+id int unique not null,
+lastname varchar(255) not null,
+firstname varchar(255) not null,
+age int not null Check (age>=18 and age<=23),
+city varchar(255) Default 'Ludhiana'
+)
+INSERT INTO persons (id, lastname, firstname, age)
+VALUES (1, "gaurav", "kakkar", 20);
+
+select * from persons;
+
+create table products(
+pid int primary key,
+pname varchar(100) not null,
+prefno int not null unique
+);
+
+insert into products values (101,"electronics", 199);
+
+select * from products;
+
+alter table persons 
+add primary key (id);
+desc persons;
+
+alter table persons 
+drop primary key;
+
+
+create table products(
+pid int primary key,
+pname varchar(100) not null,
+prefNo int not null unique
+);
+
+desc products;
+
+insert into products values (102,"furniture",19930);
+select * from products;
+
+ALTER TABLE Persons
+ADD PRIMARY KEY (ID);
+
+ALTER TABLE Persons
+DROP PRIMARY KEY;
+drop table products;
+create table category(
+cid int primary key,
+cname varchar(100) not null
+);
+
+insert into category values (101,'electronics'),(102,'Home App');
+
+select * from category;
+drop table products;
+CREATE TABLE products (
+    pid int primary key,
+    pname varchar(100) NOT NULL,
+    cid int, 
+    FOREIGN KEY (cid) REFERENCES category(cid)
+);
+desc products;
+
+delete from category where cid=101;
+update 
+
+INSERT INTO products
+VALUES (504, 'Power Bank Samsung', 101);
+
+select * from products;
+
