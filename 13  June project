@@ -1,0 +1,101 @@
+# Title                                                                 BY
+
+Campaign House – Campaign Management System                              ~ Gaurav Kakkar
+
+# Description
+
+Campaign House is a full-stack campaign management application where users can register, login, create, search, and manage campaigns.
+
+The project uses **React + TypeScript** for frontend and **FastAPI with MongoDB** for backend. It demonstrates REST API development, CRUD operations, authentication, database connectivity, API testing, and MongoDB-based data management.
+
+# Tools & Technologies
+
+| Tool               | Purpose            |
+| ------------------ | ------------------ |
+| React + TypeScript | Frontend           |
+| Vite               | Build Tool         |
+| Python             | Backend            |
+| FastAPI            | REST API Framework |
+| MongoDB            | NoSQL Database     |
+| PyMongo / Motor    | MongoDB Driver     |
+| Pydantic           | Data Validation    |
+| Uvicorn            | Server             |
+| Postman            | API Testing        |
+
+# REST API Modules
+
+## User Management
+
+POST   /register
+
+POST   /login
+
+GET    /users
+
+PUT    /user/{id}
+
+DELETE /user/{id}
+
+## Campaign Management
+
+POST   /campaign
+
+GET    /campaigns
+
+GET    /campaign/{id}
+
+PUT    /campaign/{id}
+
+DELETE /campaign/{id}
+
+## Notification Management
+
+POST /notification
+
+GET  /notifications
+
+## File Upload
+
+POST /upload
+
+# Relationship Mapping
+
+One-to-Many
+
+User → Campaigns
+
+One-to-Many
+
+Campaign → Notifications
+
+Many-to-One
+
+Campaign → User
+
+Many-to-Many
+
+Users ↔ Campaigns
+
+# Features
+
+✓ User Registration & Login
+
+✓ JWT Authentication
+
+✓ Campaign Creation
+
+✓ Campaign Management
+
+✓ Search & Filter
+
+✓ Notifications
+
+✓ File Upload
+
+✓ MongoDB Integration
+
+✓ REST API
+
+✓ CRUD Operations
+
+✓ API Testing using Postman
